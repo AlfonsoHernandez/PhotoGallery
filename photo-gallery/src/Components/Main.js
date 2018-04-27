@@ -22,15 +22,15 @@ let portImages = [
 
 
 let imageSets = [
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
-  new imageSet("Eli", "Eli", portImages, portImages[0]),
+  new imageSet("1", "Eli", portImages, portImages[0]),
+  new imageSet("2", "Eli", portImages, portImages[1]),
+  new imageSet("3", "Eli", portImages, portImages[2]),
+  new imageSet("4", "Eli", portImages, portImages[3]),
+  new imageSet("5", "Eli", portImages, portImages[5]),
+  new imageSet("6", "Eli", portImages, portImages[0]),
+  new imageSet("7", "Eli", portImages, portImages[0]),
+  new imageSet("8", "Eli", portImages, portImages[0]),
+  new imageSet("9", "Eli", portImages, portImages[0]),
 ]
 
 let feedImages = [

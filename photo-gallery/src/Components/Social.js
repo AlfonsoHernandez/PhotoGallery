@@ -3,7 +3,7 @@ import './social.css';
 import PhotoFull3Link from './PhotoFull3Link';
 class Social extends Component {
   render() {
-    let images = this.props.images[0].images;
+    let images = this.props.images;
 
     let imageCount = images.length;
     let imagesPerCol = imageCount/3;
@@ -23,19 +23,19 @@ class Social extends Component {
 
     col1 = col1.map(image => {
       return(
-        <PhotoFull3Link caption={this.props.images[0].title} imgUri={image} />
+        <PhotoFull3Link caption={image.title} imgUri={image.thumbnail} />
       );
     });
 
     col2 = col2.map(image => {
       return(
-        <PhotoFull3Link caption={this.props.images[0].title} imgUri={image} />
+        <PhotoFull3Link caption={image.title} imgUri={image.thumbnail} />
       );
     });
 
     col3 = col3.map(image => {
       return(
-        <PhotoFull3Link caption={this.props.images[0].title} imgUri={image} />
+        <PhotoFull3Link caption={image.title} imgUri={image.thumbnail} />
       );
     });
 
