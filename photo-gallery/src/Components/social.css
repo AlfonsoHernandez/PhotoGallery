@@ -4,6 +4,10 @@
   display: flex;
 }
 
+.col-3{
+  flex:1;
+}
+
 .social-container img{
   vertical-align:top;
 }
