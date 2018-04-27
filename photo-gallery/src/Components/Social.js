@@ -3,17 +3,7 @@ import './social.css';
 import PhotoFull3Link from './PhotoFull3Link';
 class Social extends Component {
   render() {
-    let images = [
-      "http://maxhdz.com/Photos/Journals/LA/la-2.jpg",
-      "http://maxhdz.com/Photos/Journals/FortFunston/ff-2.jpg",
-      "http://maxhdz.com/Photos/Journals/Alameda-AdoxColorImplosion/adox-1.jpg",
-      "http://maxhdz.com/Photos/Journals/PointReyes/pr-3.jpg",
-      "http://maxhdz.com/Photos/Journals/PointReyes/pr-2.jpg",
-      "http://maxhdz.com/Photos/Journals/PointReyes/pr-1.jpg",
-      "http://maxhdz.com/Photos/Journals/PointReyes/pr-4.jpg",
-      "http://maxhdz.com/Photos/Journals/PointReyes/pr-3.jpg",
-      "http://maxhdz.com/Photos/Journals/FortFunston/ff-2.jpg",
-    ];
+    let images = this.props.images;
 
     let imageCount = images.length;
     let imagesPerCol = imageCount/3;
