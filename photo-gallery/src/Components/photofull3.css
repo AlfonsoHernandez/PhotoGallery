@@ -1,0 +1,33 @@
+.photo-container-full-third{
+  width: 100%;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  background: black;
+  position: relative;
+  font-family: Rajdhani;
+}
+.photo-container-full-third img{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  transition: all .5s ease-in-out;
+}
+
+.photo-container-full-third:hover img{
+  opacity: 0.7;
+}
+
+.photo-container-full-third .caption{
+  font-size: 20px;
+  color:white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.photo-container-full-third:hover .caption{
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 300ms 100ms;
+}
