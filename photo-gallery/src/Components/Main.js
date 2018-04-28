@@ -8,45 +8,84 @@ function imageSet(title, link, images, thumbnail) {
   this.title = title;
   this.link = link;
   this.images = images;
-  this.thumbnail = thumbnail;
+  this.thumbnail = images[thumbnail-1];
 }
 
-let portImages = [
-  "http://maxhdz.com/Photos/EliPurple/ep-2.jpg",
-  "http://maxhdz.com/Photos/ChrisRedwoods/CR-8.jpg",
-  "http://maxhdz.com/Photos/EliPointReyes/ep-4.jpg",
-  "http://maxhdz.com/Photos/EliTahoe/eli-tahoe1jpg.jpg",
-  "http://maxhdz.com/Photos/EliBalboa/EB-12.jpg",
-  "http://maxhdz.com/Photos/EliBayTrail/_DSC0065.jpg"
-]
+function makeImageList(directory, fileName, numFiles){
+  var images = [];
+  for(var i =1; i<=numFiles; i++){
+    images.push("http://maxhdz.com/Photos/" +directory+"/"+fileName+"-"+i+".jpg");
+  }
+  return images;
+}
 
+let portImages = makeImageList("ChrisRedwoods", "CR", 8);
+let feedImages = makeImageList("Feed", "feed", 4);
+
+//Portraits
+let carlosKarina = makeImageList("Portraits/CarlosKarina", "ck", 48);
+let eliFair = makeImageList("Portraits/EliFair", "eli-fair", 3);
+
+//Social
+let twentyFirst = makeImageList("Social/21st", "bd", 72);
+let arroyoSoccer = makeImageList("Social/ArroyoSoccer","as", 4);
+let bwCameo = makeImageList("Social/B&WCameo", "bc", 9);
+let bb = makeImageList("Social/BB", "bb", 2);
+let bfd = makeImageList("Social/BFD2015", "bfd", 5);
+let bms = makeImageList("Social/BMS", "bms", 5);
+let bladium = makeImageList("Social/Bladium", "bl", 9);
+let cf = makeImageList("Social/CF", "cf", 2);
+let chrisBday = makeImageList("Social/ChrisBday17", "cb", 9);
+let firstCameo = makeImageList("Social/FC", "fc", 21);
+let juniorProm = makeImageList("Social/JuniorProm", "jp", 31);
+let juniorPromAfter = makeImageList("Social/JuniorPromAfter", "jpa", 18);
+let lakeNacimiento = makeImageList("Social/LakeNacimineto", "ln", 37);
+let mp = makeImageList("Social/MP", "mp", 6);
+let miniGolf = makeImageList("Social/Mini-Golf", "mg", 7);
+let perroNegro = makeImageList("Social/PerroNegro", "pn", 2);
+let sw = makeImageList("Social/SW", "sw", 3);
+let seniorProm = makeImageList("Social/SeniorProm", "sp", 29);
+let shadowCliffs = makeImageList("Social/ShadowCliffs", "sc", 16);
+let summerCameo = makeImageList("Social/SummerCameo", "sc", 7);
+let tahoe = makeImageList("Social/Tahoe", "t", 10);
+let weddingGDL = makeImageList("Social/WeddingGDL", "gw", 19);
+let whiteRoom = makeImageList("Social/White-Room", "wr", 12);
+let xmas17 = makeImageList("Social/XMAS17", "xmas", 23);
+let vb = makeImageList("Social/vb", "vb", 4);
+
+let socialImageSet = [
+  new imageSet("bms", "", bms, 2),
+  new imageSet("bfd 2015", "", bfd, 5),
+  new imageSet("untitled", "", sw, 2),
+  new imageSet("junior prom", "", juniorProm, 24),
+  new imageSet("junior prom after", "", juniorPromAfter, 10),
+  new imageSet("senior prom", "", seniorProm, 12),
+  new imageSet("untitled", "", cf, 1),
+  new imageSet("pizza del perro negro", "", perroNegro, 2),
+  new imageSet("tahoe 2017", "", tahoe, 5),
+  new imageSet("⚽️", "", arroyoSoccer, 2),
+  new imageSet("guadalajara wedding", "", weddingGDL, 14),
+  new imageSet("shadow cliffs", "", shadowCliffs, 1),
+  new imageSet("bladium - 2017", "", bladium, 3),
+  new imageSet("untitled II", "", whiteRoom, 1),
+  new imageSet("lake nacimiento", "", lakeNacimiento, 4),
+  new imageSet("christmas 2017", "", xmas17, 9),
+  new imageSet("chris's 21st", "", chrisBday, 6),
+  new imageSet("21st", "", twentyFirst, 38),
+]
 
 let imageSets = [
-  new imageSet("1", "Eli", portImages, portImages[0]),
-  new imageSet("2", "Eli", portImages, portImages[1]),
-  new imageSet("3", "Eli", portImages, portImages[2]),
-  new imageSet("4", "Eli", portImages, portImages[3]),
-  new imageSet("5", "Eli", portImages, portImages[5]),
-  new imageSet("6", "Eli", portImages, portImages[0]),
-  new imageSet("7", "Eli", portImages, portImages[0]),
-  new imageSet("8", "Eli", portImages, portImages[0]),
-  new imageSet("9", "Eli", portImages, portImages[0]),
+  new imageSet("1", "Eli", portImages, 1),
+  new imageSet("Carlos + Karina", "Eli", carlosKarina, 20),
+  new imageSet("3", "Eli", portImages, 4),
+  new imageSet("4", "Eli", portImages, 5),
+  new imageSet("5", "Eli", portImages, 6),
+  new imageSet("6", "Eli", portImages, 7),
+  new imageSet("7", "Eli", portImages, 8),
+  new imageSet("8", "Eli", portImages, 1),
+  new imageSet("8", "Eli", portImages, 2),
+  new imageSet("ELi II", "eli", eliFair, 2),
 ]
-
-let feedImages = [
-  "http://maxhdz.com/Feed/feed-1.jpg",
-  "http://maxhdz.com/Feed/feed-2.jpg",
-  "http://maxhdz.com/Photos/SB18/sb-2.jpg",
-  "http://maxhdz.com/Feed/feed-3.jpg",
-  "http://maxhdz.com/Photos/SB18/sb-59.jpg",
-  "http://maxhdz.com/Feed/feed-4.jpg",
-  "http://maxhdz.com/Photos/SB18/sb-67.jpg",
-  "http://maxhdz.com/Photos/SB18/sb-69.jpg",
-  "http://maxhdz.com/Photos/SB18/sb-79.jpg",
-  "http://maxhdz.com/Photos/SB18/sb-71.jpg",
-  "http://maxhdz.com/Photos/SB18/sb-43.jpg",
-  "http://maxhdz.com/Photos/SB18/sb-44.jpg"
-];
 
 let socialImages = [
   "http://maxhdz.com/Photos/Film/21st/bd-38.jpg",
@@ -66,8 +105,8 @@ const Main = () => (
     <Switch>
       <Route path='/Feed' render={(props) => <Gallery images={feedImages}/>}/>
       <Route path='/Journals' render={(props) => <Social images={imageSets}/>}/>
-      <Route path='/Portraits' render={(props) => <Gallery images={portImages}/>}/>
-      <Route path='/Social' render={(props) => <Social images={imageSets}/>}/>
+      <Route path='/Portraits' render={(props) => <Social images={imageSets}/>}/>
+      <Route path='/Social' render={(props) => <Social images={socialImageSet}/>}/>
     </Switch>
   </main>
 )
