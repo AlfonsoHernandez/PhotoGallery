@@ -2,6 +2,7 @@
   width: 100%;
   display: inline-block;
   margin: 0px;
+  margin-top: -4px;
   padding: 0px;
   background: black;
   position: relative;
@@ -16,6 +17,7 @@
 
 .photo-container-full-third:hover img{
   opacity: 0.7;
+  transform: scale(1.2);
 }
 
 .photo-container-full-third .caption{
