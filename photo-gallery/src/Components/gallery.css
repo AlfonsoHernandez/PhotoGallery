@@ -2,3 +2,9 @@
   margin: auto;
   display: inline-block;
 }
+
+.gallery-container{
+  width: 98%;
+  max-width: 1600px;
+  margin: auto;
+}
