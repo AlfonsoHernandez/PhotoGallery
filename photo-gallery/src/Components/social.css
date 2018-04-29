@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   display: flex;
+  width: 98%;
+  max-width: 1200px;
+  margin: auto;
+  font-family: serif;
 }
 
 .col-3{
@@ -10,4 +14,10 @@
 
 .social-container img{
   vertical-align:top;
+  filter: none;
+  filter: none;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
 }
