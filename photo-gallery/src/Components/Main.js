@@ -25,6 +25,15 @@ let feedImages = makeImageList("Feed", "feed", 4);
 //Portraits
 let carlosKarina = makeImageList("Portraits/CarlosKarina", "ck", 48);
 let eliFair = makeImageList("Portraits/EliFair", "eli-fair", 3);
+let chrisRed = makeImageList("Portraits/ChrisRedwoods", "CR", 8);
+let ucbGrad = makeImageList("Portraits/UCBGrad18", "ucg", 66);
+
+let portraitImageSet = [
+  new imageSet("Chris Redwoods", "", chrisRed, 8),
+  new imageSet("Carlos + Karina", "Eli", carlosKarina, 20),
+  new imageSet("ELi II", "eli", eliFair, 2),
+  new imageSet("UCB Grads", "", ucbGrad, 66)
+]
 
 //Social
 let twentyFirst = makeImageList("Social/21st", "bd", 72);
@@ -74,6 +83,39 @@ let socialImageSet = [
   new imageSet("21st", "", twentyFirst, 38),
 ]
 
+//JOURNALS
+let nine = makeImageList("Journals/990", "nn", 2);
+let alameda = makeImageList("Journals/Alameda-AdoxColorImplosion", "adox", 5);
+let canonet1 = makeImageList("Journals/Canonet-I", "cn", 6);
+let canonet2 = makeImageList("Journals/Canonet-II", "cn", 11);
+let fortFunston = makeImageList("Journals/FortFunston", "ff", 5);
+let la = makeImageList("Journals/LA", "la", 2);
+let lakeNaci = makeImageList("Journals/LakeNacimiento-Adox", "adox", 6);
+let oakland = makeImageList("Journals/Oakland-Colorplus", "oak", 11);
+let pacifica = makeImageList("Journals/Pacifica-Portra400","pc", 10);
+let pointReyes = makeImageList("Journals/PointReyes", "pr", 4);
+let sf = makeImageList("Journals/SF-Portra400", "sf", 10);
+let slz = makeImageList("Journals/SLZ", "slz", 8);
+let suburbs = makeImageList("Journals/Suburbs-IlfordXP2", "sub", 5);
+
+let journalImageSet = [
+  new imageSet("VWLA", "", la, 1),
+  new imageSet("San Lorenzo", "", slz, 2),
+  new imageSet("The Suburbs", "", suburbs, 3),
+  new imageSet("San Francisco", "", sf, 2),
+  new imageSet("Pacifica", "", pacifica, 2),
+  new imageSet("Lake Nacimiento", "", lakeNaci, 1),
+  new imageSet("San Leandro", "", canonet2, 8),
+  new imageSet("Fort Funston", "", fortFunston, 2),
+  new imageSet("Alameda", "", alameda, 1),
+  new imageSet("Fort Funston", "", fortFunston, 2),
+  new imageSet("Untitled", "", canonet1, 5),
+  new imageSet("990", "", nine, 1),
+  new imageSet("Point Reyes", "", pointReyes, 3),
+  new imageSet("Fort Funston", "", fortFunston, 2),
+  new imageSet("VWLA", "", la, 2),
+]
+
 let imageSets = [
   new imageSet("1", "Eli", portImages, 1),
   new imageSet("Carlos + Karina", "Eli", carlosKarina, 20),
@@ -100,12 +142,13 @@ let socialImages = [
   "http://maxhdz.com/Photos/Film/vb/vb-1.jpg"
 ]
 
+
 const Main = () => (
   <main>
     <Switch>
       <Route path='/Feed' render={(props) => <Gallery images={feedImages}/>}/>
-      <Route path='/Journals' render={(props) => <Social images={imageSets}/>}/>
-      <Route path='/Portraits' render={(props) => <Social images={imageSets}/>}/>
+      <Route path='/Journals' render={(props) => <Social images={journalImageSet}/>}/>
+      <Route path='/Portraits' render={(props) => <Social images={portraitImageSet}/>}/>
       <Route path='/Social' render={(props) => <Social images={socialImageSet}/>}/>
     </Switch>
   </main>
