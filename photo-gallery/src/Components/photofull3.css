@@ -1,20 +1,25 @@
 .photo-container-full-third{
   width: 100%;
   display: inline-block;
-  margin: 0px;
-  margin-top: -12px;
-  padding: 0px;
-  background: black;
+  margin-top: -4px;
   position: relative;
   font-family: Rajdhani;
   overflow: hidden;
-  border: solid 6px white;
+  border: solid 4px white;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background: black;
+  z-index: 1;
 }
 .photo-container-full-third img{
   width: 100%;
   margin: 0px;
   padding: 0px;
   transition: all .5s ease-in-out;
+  position: relative;
+  z-index: 2;
 }
 
 .photo-container-full-third:hover img{
@@ -31,6 +36,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   font-weight: 300;
+  z-index: 3;
 }
 
 .photo-container-full-third:hover .caption{
