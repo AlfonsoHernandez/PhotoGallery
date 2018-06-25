@@ -1,0 +1,48 @@
+.full-screen-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 15;
+    cursor: default;
+}
+
+.exit img{
+    margin-top: 10px;
+    width: 80px;
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.image-container{
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.image-container img{
+  height: 95%;
+  float: none;
+  margin: 0;
+  opacity: none;
+  margin-top: 1%;
+}
+
+@media screen and (max-width: 40em) {
+    .image-container{
+      text-align: center;
+    }
+    .image-container img{
+      width: 95%;
+      height: auto;
+      margin: 0;
+    }
+    .exit img{
+      width: 40px;
+      margin-bottom: 20px;
+    }
+}
