@@ -3,8 +3,9 @@
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 140px;
+  cursor: pointer;
 }
 
-.photo-container-third img{
+.photo-container-third .photo img{
   width: 90%;
 }
